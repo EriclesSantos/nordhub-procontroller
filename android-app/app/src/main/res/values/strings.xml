@@ -1,0 +1,12 @@
+<resources>
+    <string name="wifi_setup">No auxiliar do computador, escolha Wi-Fi. Depois, leia o QR para conectar.</string>
+<string name="wifi_start_failed">Não foi possível iniciar a conexão local.</string>
+    <string name="advanced_percentage">%1$s: %2$d%%</string>
+    <string name="qr_scan_hint">Aponte a câmera para o QR do auxiliar Nördhub no computador.</string>
+    <string name="qr_back">Voltar</string>
+    <string name="qr_retry">Permitir câmera / tentar novamente</string>
+    <string name="qr_wrong">Esse QR não é do Nördhub. Aponte para o QR mostrado pelo auxiliar do PC.</string>
+    <string name="wifi_scan">Ler QR Code do computador</string>
+    <string name="wifi_local_scan">Celular e computador na mesma rede. A leitura é feita neste aparelho; nenhuma imagem é enviada.</string>
+    <string name="wifi_manual_invalid">Confira IP, porta e código mostrados em Avançado no computador.</string>
+</resources>

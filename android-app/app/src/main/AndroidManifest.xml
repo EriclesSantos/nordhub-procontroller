@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <application android:theme="@android:style/Theme.Material.NoActionBar" android:label="${appLabel}" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:dataExtractionRules="@xml/data_extraction_rules" android:allowBackup="false" android:fullBackupContent="false" android:supportsRtl="true">
+        <service android:name="com.switchphone.bluetooth.HidForegroundService" android:exported="false" android:foregroundServiceType="connectedDevice" android:stopWithTask="false" />
+        <service android:name="com.switchphone.wifi.WifiForegroundService" android:exported="false" android:foregroundServiceType="connectedDevice" android:stopWithTask="false" />
+        <activity android:name="com.switchphone.AdvancedSettingsActivity" android:exported="false" android:screenOrientation="landscape" />
+        <activity android:name="com.switchphone.wifi.QrScannerActivity" android:exported="false" />
+        <activity android:name="com.switchphone.wifi.WifiControllerActivity" android:exported="false" android:screenOrientation="landscape" android:launchMode="singleTop" />
+        <activity android:name="com.switchphone.MainActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+    </application>
+</manifest>

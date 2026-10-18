@@ -1,0 +1,13 @@
+.gradle/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+*.iml
+*.p12
+*.pfx
+keystore-password
+.switchphone-tools/
+__pycache__/
+switchphone-bluetooth-*.json

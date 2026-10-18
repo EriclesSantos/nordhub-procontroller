@@ -1,0 +1,52 @@
+name: Nordhub - Android and Windows
+on:
+  push:
+    branches: [main]
+    paths: ['android-app/**', 'pc-companion/**', 'tests/**', '.github/workflows/build.yml']
+  pull_request:
+    paths: ['android-app/**', 'pc-companion/**', 'tests/**', '.github/workflows/build.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: nordhub-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+      - uses: gradle/actions/setup-gradle@v4
+      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - run: sh tests/run.sh
+      - run: bash gradlew assembleRelease lintRelease
+        working-directory: android-app
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Fetch pinned native client
+        run: ./pc-companion/fetch-client.ps1 -OutputDirectory "$env:RUNNER_TEMP/nordhub-deps"
+      - name: Compile and verify Windows bridge and Java interoperability
+        run: ./tests/check-wifi.ps1 -ClientDll "$env:RUNNER_TEMP/nordhub-deps/ViGEmClient64.dll" -OutputDirectory "$env:RUNNER_TEMP/nordhub-checks"
