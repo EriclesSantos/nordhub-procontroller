@@ -39,10 +39,12 @@ Quem já usa **Nördhub ProController 0.2.8 ou superior** pode instalar a atuali
 |---|---|---|
 | Desktop/notebook Windows 10/11 x64 | Bluetooth ou Wi-Fi local | Auxiliar Nördhub, .NET Framework 4.8 e ViGEmBus compatível. |
 | Portátil Windows x64 | Bluetooth ou Wi-Fi local | Mesmos requisitos do computador. |
-| Nintendo Switch com Atmosphère | Bluetooth, experimental | MissionControl compatível instalado. |
+| Nintendo Switch com Atmosphère | Bluetooth, experimental | MissionControl atualizado, compatível com o firmware do console e o Atmosphère instalado. |
 | Portátil Android como controle | Bluetooth ou Wi-Fi para o PC | Android 9+; HID Device do fabricante para Bluetooth. |
 | SteamOS/Linux/macOS | Sem auxiliar publicado | A versão do auxiliar é Windows x64. |
 | Xbox, PS4 e PS5 físicos | Sem suporte direto | Selecionar um layout não muda a compatibilidade do console. |
+
+**Para jogar no Switch:** use a versão estável mais recente do MissionControl compatível com o firmware do console e a versão do Atmosphère instalada. [Consultar e baixar a versão mais recente](https://github.com/ndeadly/MissionControl/releases/latest) · [Consultar todas as versões](https://github.com/ndeadly/MissionControl/releases). Confira os requisitos de compatibilidade nas notas da versão antes de atualizar.
 
 O jogo precisa aceitar o tipo de controle disponibilizado. **Bluetooth e Wi-Fi ainda têm diferenças de recursos**, listadas no [guia de ajustes](docs/recursos.md). Novos recursos Wi-Fi/sensores estão em versão experimental; disponibilidade e desempenho dependem do telefone, da rede e do jogo.
 
