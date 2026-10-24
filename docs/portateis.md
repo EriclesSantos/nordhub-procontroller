@@ -14,7 +14,7 @@ O caminho disponível é **Bluetooth experimental**, em um console que já tenha
 
 - Nördhub ProController no celular Android 9+, com suporte HID Device do fabricante.
 - [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere/releases) já configurado no console.
-- [MissionControl — instalação e requisitos](https://github.com/ndeadly/MissionControl#installation) e [releases oficiais](https://github.com/ndeadly/MissionControl/releases), compatíveis com o firmware/Atmosphère instalados.
+- **MissionControl atualizado:** use a versão estável mais recente compatível com o firmware do Switch e a versão do Atmosphère instalada. Consulte [a versão mais recente e seus downloads](https://github.com/ndeadly/MissionControl/releases/latest), [todas as versões disponíveis](https://github.com/ndeadly/MissionControl/releases) e as [instruções oficiais de instalação e requisitos](https://github.com/ndeadly/MissionControl#installation). Confira os requisitos de compatibilidade nas notas da versão antes de atualizar.
 
 O auxiliar Windows e o ViGEmBus não são necessários para conectar o celular diretamente ao Switch. Antes de atualizar arquivos do cartão, preserve um backup e siga as instruções da versão do MissionControl escolhida; reinicie o console após a instalação.
 
