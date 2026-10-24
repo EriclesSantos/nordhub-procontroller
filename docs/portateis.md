@@ -16,7 +16,30 @@ O caminho disponível é **Bluetooth experimental**, em um console que já tenha
 - [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere/releases) já configurado no console.
 - **MissionControl atualizado:** use a versão estável mais recente compatível com o firmware do Switch e a versão do Atmosphère instalada. Consulte [a versão mais recente e seus downloads](https://github.com/ndeadly/MissionControl/releases/latest), [todas as versões disponíveis](https://github.com/ndeadly/MissionControl/releases) e as [instruções oficiais de instalação e requisitos](https://github.com/ndeadly/MissionControl#installation). Confira os requisitos de compatibilidade nas notas da versão antes de atualizar.
 
-O auxiliar Windows e o ViGEmBus não são necessários para conectar o celular diretamente ao Switch. Antes de atualizar arquivos do cartão, preserve um backup e siga as instruções da versão do MissionControl escolhida; reinicie o console após a instalação.
+O auxiliar Windows e o ViGEmBus não são necessários para conectar o celular diretamente ao Switch.
+
+### Instalar ou atualizar o MissionControl
+
+Para um Switch que já tenha Atmosphère configurado, a instalação inicial e a atualização usam o pacote completo do MissionControl:
+
+1. Abra a [página oficial da versão mais recente](https://github.com/ndeadly/MissionControl/releases/latest) e confira nas notas os requisitos para o firmware do console e a versão do Atmosphère. Se necessário, atualize primeiro o Atmosphère seguindo a documentação dele.
+2. Em **Assets**, baixe o arquivo `MissionControl-<versão>-...zip`. Escolha o pacote do MissionControl; os arquivos **Source code** são o código-fonte, não o pacote pronto para instalar.
+3. Desligue completamente o Switch pelo menu de energia antes de retirar o microSD.
+4. Conecte o microSD ao computador com um leitor e faça backup das pastas `atmosphere` e `config`, se existirem.
+5. Extraia o ZIP em uma pasta temporária do computador.
+6. Copie **todo o conteúdo extraído para a raiz do microSD**, onde já fica a pasta `atmosphere`. As pastas `atmosphere` e `config` do pacote devem se juntar às correspondentes no cartão.
+7. Se estiver atualizando, aceite **mesclar as pastas e substituir os arquivos do pacote**. Preserve os demais arquivos do cartão e copie também os patches incluídos no ZIP.
+8. Ejete o cartão com segurança, recoloque-o no Switch e inicie o console pelo Atmosphère, usando seu procedimento habitual. É necessário iniciar/reiniciar completamente o sistema para carregar o módulo; sair do modo de descanso não aplica a atualização.
+
+O arquivo principal deve ficar em `atmosphere/contents/010000000000bd00/exefs.nsp`. Evite deixar o pacote dentro de uma pasta extra no cartão, como `MissionControl/atmosphere`. Copie o pacote completo, além desse arquivo.
+
+O MissionControl é um **módulo de sistema carregado pelo Atmosphère**. O `exefs.nsp` permanece na pasta do módulo; a instalação é feita copiando os arquivos para o cartão, sem usar um instalador de jogos.
+
+### Conferir se o módulo carregou
+
+O MissionControl funciona em segundo plano e não tem um aplicativo para abrir no menu Homebrew. Segundo a [documentação oficial](https://github.com/ndeadly/MissionControl#frequently-asked-questions), com um Joy-Con esquerdo ou Pro Controller conectado por Bluetooth, pressione **direcional para cima + − (menos)**. Se uma captura de tela for feita, o módulo está carregado.
+
+Depois, siga o pareamento do Nördhub ProController abaixo. Se o módulo não carregar, confira a compatibilidade das versões, a localização dos arquivos e se houve uma reinicialização completa.
 
 ### Parear
 
