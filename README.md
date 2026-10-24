@@ -44,7 +44,7 @@ Quem já usa **Nördhub ProController 0.2.8 ou superior** pode instalar a atuali
 | SteamOS/Linux/macOS | Sem auxiliar publicado | A versão do auxiliar é Windows x64. |
 | Xbox, PS4 e PS5 físicos | Sem suporte direto | Selecionar um layout não muda a compatibilidade do console. |
 
-**Para jogar no Switch:** use a versão estável mais recente do MissionControl compatível com o firmware do console e a versão do Atmosphère instalada. [Consultar e baixar a versão mais recente](https://github.com/ndeadly/MissionControl/releases/latest) · [Consultar todas as versões](https://github.com/ndeadly/MissionControl/releases). Confira os requisitos de compatibilidade nas notas da versão antes de atualizar.
+**Para jogar no Switch:** use a versão estável mais recente do MissionControl compatível com o firmware do console e a versão do Atmosphère instalada. [Consultar e baixar a versão mais recente](https://github.com/ndeadly/MissionControl/releases/latest) · [Consultar todas as versões](https://github.com/ndeadly/MissionControl/releases). Confira os requisitos de compatibilidade nas notas da versão antes de atualizar. Siga o [passo a passo para instalar ou atualizar o MissionControl no Switch](docs/portateis.md#instalar-ou-atualizar-o-missioncontrol).
 
 O jogo precisa aceitar o tipo de controle disponibilizado. **Bluetooth e Wi-Fi ainda têm diferenças de recursos**, listadas no [guia de ajustes](docs/recursos.md). Novos recursos Wi-Fi/sensores estão em versão experimental; disponibilidade e desempenho dependem do telefone, da rede e do jogo.
 
